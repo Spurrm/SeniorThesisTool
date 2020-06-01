@@ -1,9 +1,5 @@
-'''
-Implementation of Needleman-Wunsch Algorithm
-according to Chapter 3 pseudocode in
-Exploring Bioinformatics: A Project-Based Approach by
-Caroline St.Clair and Jonathan Visick
-'''
+from Bio import SeqIO
+from Bio.Seq import Seq
 
 # Step 0: Initialization and Read in Sequences
 
@@ -63,8 +59,8 @@ for i in range(1, N+1):
 print "Matrix"
 for row in matrix:
     for elem in row:
-        print " {:>3} ".format(elem),
-    print ''
+         print " {:>3} ".format(elem),
+    print " "
 
 # Step 2: Create Directional Strings
 
@@ -95,7 +91,7 @@ def getDirectionalString(matrix, N, M):
     return dstring     #end function
 
 dstring = getDirectionalString(matrix, N, M) # call the function getDirectionalString (lines 60-83)
-print "Directional String: " + dstring
+# print "Directional String: " + dstring
 
 # Step 3: Build Alignments Using Directional Strings
 seq1pos = N - 1
@@ -129,7 +125,7 @@ while (dirpos < len(dstring)):
     dirpos+=1
 
 print "Alignment:"
-perLine = 5
+perLine = 50
 numLines = len(alignSeq1) / perLine  # 50 to a line
 if len(alignSeq1) % perLine != 0:
     numLines+=1
