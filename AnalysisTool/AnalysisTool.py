@@ -56,11 +56,11 @@ for i in range(1, N+1):
         matrix[i][j] = max(score1, score2, score3)
 
 # format matrix output
-print "Matrix"
-for row in matrix:
-    for elem in row:
-         print " {:>3} ".format(elem),
-    print " "
+# print "Matrix"
+# for row in matrix:
+#     for elem in row:
+#          # print " {:>3} ".format(elem),
+#     print " "
 
 # Step 2: Create Directional Strings
 
